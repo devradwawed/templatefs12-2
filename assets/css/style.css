@@ -1,0 +1,72 @@
+/* ================= Public Style=================== */
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-shadow: 0;
+  font-family: 'Mukta Mahee', sans-serif;
+}
+:root{
+  --fontFamily:'Quicksand', sans-serif;
+  --textColor:#009961;
+  --linkColor:#333;
+}
+body{
+  background-color: #ddd;
+}
+
+/*================Start Navber ================ */
+.navbar{
+  background-color: #fff;
+  padding: 22px 50px;
+}
+.navbar .navbar-brand img{
+  max-height: 40px;
+}
+.navbar .nav-item {
+  margin-right: 14px;
+  position: relative;
+}
+.navbar .nav-item::before , .navbar .nav-item::after{
+  position: absolute;
+  font-size: 22px;
+  color: var(--textColor);
+  top: 10%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+}
+.navbar .nav-item::before{
+  content: "[";
+  left: -17%;
+
+}
+.navbar .nav-item::after{
+  content: "]";
+  right:-17%;
+}
+.navbar .nav-item:hover::before{
+  opacity: 1;
+  visibility: visible;
+  left: -2px;
+}
+.navbar .nav-item:hover::after{
+  opacity: 1;
+  visibility: visible;
+  right: -2px;
+}
+.navbar .nav-item .nav-link{
+  color:var(--linkColor);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--fontFamily);
+}
+.navbar .dropdown-toggle::after{
+  display:none;
+}
+/* ================end Navber ================ */
