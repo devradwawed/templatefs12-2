@@ -12,7 +12,6 @@
   --linkColor:#333;
 }
 body{
-  background-color: #ddd;
   height: 10000000px;
 }
 
@@ -21,7 +20,6 @@ body{
   color: #fff;
   font-size: 16px;
   padding: 10px 30px 10px;
-  display: block;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
@@ -54,10 +52,40 @@ body{
 .btnpublic:hover{
   color: var(--textColor);
 }
+.title {
+
+}
+.title span{
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  color: var(--textColor);
+  font-family: var(--fontFamily);
+}
+.title h2{
+  color: #303745;
+  font-family: var(--fontFamily);
+  font-size: 42px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 30px;
+}
+.title h2::after{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background: var(--textColor);
+  z-index: 9;
+  bottom: 0;
+  left: 0;
+}
 /*================Start Navber ================ */
 .navbar{
   background-color: #fff;
   padding: 22px 50px;
+  z-index: 99999;
 }
 .navbar .navbar-brand img{
   max-height: 40px;
@@ -304,9 +332,11 @@ body{
 /* ================Start Header ================ */
 header{
   background-color: #fff;
-  padding: 120px 0;
   position: relative;
   overflow: hidden;
+  height: calc(100vh - 94px);
+  display: flex;
+  align-items: center;
 }
 header::before{
   content: "";
@@ -369,30 +399,30 @@ header .img-box::after{
   content: "";
   position: absolute;
   width: 40%;
-  height: 40%;
+  height: 28%;
   background-image: url("../img/sl_4.png");
   right: 0;
-  top: -44px;
+  top: -4px;
   background-size: contain;
   background-repeat: no-repeat;
-  animation: imgBox 1s alternate infinite;
-  -webkit-animation: imgBox 1s alternate infinite;
+  animation: imgBox 2s alternate infinite;
+  -webkit-animation: imgBox 2s alternate infinite;
 }
 
 @keyframes imgBox {
   0%{
-    transform: perspective(1000) rotateY(50deg) translate3d(0px ,0px, 0px);
-    -webkit-transform: perspective(1000) rotateY(50deg) translate3d(0px ,0px, 0px);
-    -moz-transform: perspective(1000) rotateY(50deg) translate3d(0px ,0px, 0px);
-    -ms-transform: perspective(1000) rotateY(50deg) translate3d(0px ,0px, 0px);
-    -o-transform: perspective(1000) rotateY(50deg) translate3d(0px ,0px, 0px);
+    transform:perspective(1000px) rotateY(50deg) translate3d(0,0,0) ;
+    -webkit-transform:perspective(1000px) rotateY(50deg) translate3d(0,0,0) ;
+    -moz-transform:perspective(1000px) rotateY(50deg) translate3d(0,0,0) ;
+    -ms-transform:perspective(1000px) rotateY(50deg) translate3d(0,0,0) ;
+    -o-transform:perspective(1000px) rotateY(50deg) translate3d(0,0,0) ;
 }
 100%{
-  transform: perspective(1000) rotateY(-50deg) translate3d(0px ,0px, 0px);
-  -webkit-transform: perspective(1000) rotateY(-50deg) translate3d(0px ,0px, 0px);
-  -moz-transform: perspective(1000) rotateY(-50deg) translate3d(0px ,0px, 0px);
-  -ms-transform: perspective(1000) rotateY(-50deg) translate3d(0px ,0px, 0px);
-  -o-transform: perspective(1000) rotateY(-50deg) translate3d(0px ,0px, 0px);
+  transform:perspective(1000px) rotateY(-50deg)  ;
+  -webkit-transform:perspective(1000px) rotateY(-50deg)  ;
+  -moz-transform:perspective(1000px) rotateY(-50deg)  ;
+  -ms-transform:perspective(1000px) rotateY(-50deg)  ;
+  -o-transform:perspective(1000px) rotateY(-50deg)  ;
 }
 }
 header .img-box .main-img{
@@ -404,4 +434,116 @@ header .img-box .main-img{
   -ms-transform: scale(1.4);
   -o-transform: scale(1.4);
 }
+header .img-box .img-header{
+  position: absolute;
+  left: 0;
+  width: 45%;
+}
+@media (max-width:991px) {
+  header .content p{
+    font-size: 28px;
+    font-weight: 700;
+  }
+  header .content h1 {
+    font-weight: 700;
+    font-size: 40px;
+  }
+}
+@media (max-width:575px) {
+  header .img-box {
+    position: relative;
+    width: 60%;
+    margin: auto;
+}
+header .content{
+  text-align: center;
+  margin-top: 31px;
+}
+header .content p{
+  font-size: 18px;
+  font-weight: 700;
+}
+header .content h1 {
+  font-weight: 700;
+  font-size: 28px;
+}
+}
 /* ================End Header ================ */
+/* ================start working-site ================  */
+.working{
+
+}
+
+.working .card{
+  background-color: #FFFFFF;
+  border-radius: 10px 10px 10px 10px;
+  padding: 35px 22px 45px 22px;
+  box-shadow: 0px 0px 150px 0px #eeeeee;
+  border: 0;
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+.working .card:hover{
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  background-color: var(--textColor);
+}
+.working .card .card-body{
+  text-align: center;
+}
+.working .card .card-body .card-title{
+  color: #282828;
+  font-size: 19px;
+  font-family: var(--fontFamily);
+  font-weight: 700;
+  text-decoration: none;
+}
+.working .card .card-body .card-text{
+  color: #646464;
+}
+.working .card:hover .card-body .card-text ,
+.working .card:hover .card-body .card-title{
+  color: #fff;
+}
+@media (min-width:1211px) {
+  .working .container-fluid{
+    max-width: 1140px;
+  }
+}
+/*  ================end working-site ================ */
+
+/* ================start about-us ================ */
+.about-us{
+  padding: 100px 0;
+}
+/* .about-us .about-img img{
+  width: 100%;
+} */
+.about-us p{
+  color: #646464 ;
+  margin-top: 40px;
+}
+.about-us ul {
+  list-style: none;
+  margin-bottom:0;
+}
+.about-us ul li {
+  padding-left: 25px ;
+  line-height: 34px;
+}
+.about-us ul li i{
+  color: var(--textColor);
+  margin-right: 10px;
+}
+/* ================end wabout-us================ */
