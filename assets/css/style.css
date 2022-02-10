@@ -14,7 +14,9 @@
 body{
   height: 10000000px;
 }
-
+.container-public{
+  max-width: 1340px;
+}
 .btnpublic{
   background-color:var(--textColor);
   color: #fff;
@@ -71,7 +73,7 @@ body{
   position: relative;
   padding-bottom: 30px;
 }
-.title h2::after{
+.title h2::after , .title-two h2::after{
   content: "";
   position: absolute;
   width: 50px;
@@ -80,6 +82,19 @@ body{
   z-index: 9;
   bottom: 0;
   left: 0;
+}
+.title-two h2::after{
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.title-two{
+  width: 50%;
+  margin: auto;
+  text-align: center;
 }
 /*================Start Navber ================ */
 .navbar{
@@ -516,11 +531,7 @@ header .content h1 {
 .working .card:hover .card-body .card-title{
   color: #fff;
 }
-@media (min-width:1211px) {
-  .working .container-fluid{
-    max-width: 1140px;
-  }
-}
+
 /*  ================end working-site ================ */
 
 /* ================start about-us ================ */
@@ -547,3 +558,146 @@ header .content h1 {
   margin-right: 10px;
 }
 /* ================end wabout-us================ */
+
+/* ================start contact ================  */
+.contact{
+  background-image: url("../img/call-to-action-2.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 0 180px ;
+}
+.contact .title-contact{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+.contact .title-contact h2{
+  font-size: 42px;
+  font-weight: 700;
+  font-family: var(--fontFamily);
+  color: #fff;
+  margin-bottom: 40px;
+}
+@media (max-width:991px) {
+  .contact .title-contact{
+    width: 85%;
+  }
+}
+@media (max-width:575px) {
+  .contact .title-contact{
+    width: 100%;
+    padding: 0 15px;
+  }
+  .contact .title-contact h2{
+    font-size: 28px;
+    line-height: 1.6;
+  }
+}
+/* ================end wcontact================ */
+
+/* ================start counter-up ================ */
+.counter-up{
+  box-shadow: 0px 14px 30px 0px rgb(0 0 0 / 7%);
+  padding: 20px 0;
+  width: 80%;
+  margin: -80px auto;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.counter-up span{
+  color: var(--textColor);
+  font-size: 60px;
+  font-weight: 600;
+}
+.counter-up p{
+  color: #282828;
+  font-family: var(--fontFamily);
+  font-size: 20px;
+  font-weight: 600;
+}
+/* ================end counter-up================ */
+/*  ================start services ================ */
+.services{
+  padding: 140px 0;
+}
+.services .nav-services{
+  margin-top: 50px;
+}
+
+.services .nav-services .nav-pills{
+  justify-content: center;
+}
+.services .nav-services .nav-pills .nav-item{
+  margin-right: 15px;
+}
+.services .nav-services .nav-pills .nav-item .nav-link{
+  box-shadow: 0 0 30px rgb(228 219 219 / 50%);
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-align: center;
+  color: #282828;
+}
+.services .nav-services .nav-pills .nav-item .nav-link i{
+  display: block;
+  font-size: 60px;
+  color: var(--textColor);
+  margin-bottom: 15px;
+}
+.nav-pills .nav-link.active{
+  background-color: transparent;
+  color: #282828;
+  border-bottom: 3px solid var(--textColor);
+}
+.services .tab-content{
+  margin-top:50px;
+}
+.services .tab-content .tab-pane {
+
+}
+.services .tab-content .tab-pane .services-img img{
+  width:100%;
+}
+.services .tab-content .tab-pane .services-desc h2{
+  font-size: 42px;
+  color: #303745;
+  font-weight: 700;
+  font-family:var(--fontFamily);
+  margin-bottom: 20px;
+}
+.services .tab-content .tab-pane .services-desc p{
+  color: #7A7A7A;
+}
+.services .tab-content .tab-pane .services-desc ul {
+  list-style: none;
+}
+.services .tab-content .tab-pane .services-desc ul li{
+  line-height: 1.9;
+  color: #7A7A7A;
+}
+.services .tab-content .tab-pane .services-desc ul li i{
+  color: var(--textColor);
+  margin-right: 15px;
+}
+.services .tab-content .tab-pane .services-desc .btnpublic{
+  background-color: #fff;
+  color: var(--textColor);
+  border: 1px solid var(--textColor);
+}
+.services .tab-content .tab-pane .services-desc .btnpublic::before{
+  background-color: var(--textColor);
+}
+.services .tab-content .tab-pane .services-desc .btnpublic:hover{
+  color: #fff;
+}
+/* ================end services ================  */
